@@ -1,0 +1,11 @@
+.produto{
+    font-family: 'Roboto Condensed';
+    color: #846219;
+    box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
+    margin: 30px;
+    padding: 5px;
+}
+
+.ocultar{
+    display: none;
+}
