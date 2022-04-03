@@ -8,12 +8,18 @@
     </head>
 
     <header>
-        <h1>Pesquise seu produto</h1>     
+        <div id="titulo">
+            <h1>Pesquise seu produto</h1>  
+        </div>   
     </header>
     
     <body>
-        <input id="caixaBusca" type="text" label="Busca de produtos" placeholder="Digite aqui">
-        <button onclick="filtraProdutos()">Pesquisar</button>
+        <div id="formulario">
+            <form>
+                <input  id="caixaBusca" type="text" label="Busca de produtos" placeholder="Digite aqui">
+                <button id="botaoBusca" type="button" onclick="filtraProdutos()">Pesquisar</button>
+            </form>
+        </div>
 
         <div id="titulo-busca"></div>
         <div id="resultados-busca"></div>

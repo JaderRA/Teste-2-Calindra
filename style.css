@@ -1,5 +1,40 @@
+/*Cabeçalho*/
+
+#titulo{   
+    font-family: 'Roboto Condensed';
+    text-align: center;
+    color: #846219; 
+    width: 100%;
+    margin: 10px;
+}
+
+/*Caixa de busca*/
+
+#formulario{
+    width: 100%;
+    text-align: center;
+}
+
+#caixaBusca{
+    border-color: #846219;
+
+}
+
+/*Botão de busca*/
+
+#botaoBusca{
+    color: #fff;
+    background-color: #846219;
+    cursor: pointer;
+    padding: 2px;
+}
+
+
+
+/*Cartões de Produtos*/
 .produto{
     font-family: 'Roboto Condensed';
+    text-align: center;
     color: #846219;
     box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
     margin: 30px;
@@ -8,4 +43,16 @@
 
 .ocultar{
     display: none;
+}
+
+#resultados-busca{
+    width: 100%;
+    display: inline;
+}
+
+@media screen and (min-width: 1000px){
+    
+    .produto{
+        width: 50%;
+    }
 }
