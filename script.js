@@ -13,7 +13,7 @@ async function carregaProdutos(){
 function filtraProdutos(){
     var palavraChave = document.getElementById('caixaBusca').value;
     if(palavraChave == null || palavraChave == ""){
-        document.getElementById('resultados-busca').innerHTML += `<p class="mensagemErro">Por favor, insira uma palavra chave.</p>`
+        document.getElementById('titulo-busca').innerHTML += `<p class="mensagemErro">Por favor, insira uma palavra chave.</p>`
     } else {
         let listaProdutos = document.getElementsByName('produto');
         var contaProduto = 0;
@@ -27,7 +27,10 @@ function filtraProdutos(){
         })
 
         if(contaProduto == 0){
-            document.getElementById('resultados-busca').innerHTML = `<p class="mensagemErro">Não foram encontrados resultados para sua busca.</p>` 
+            document.getElementById('titulo-busca').innerHTML = `<p class="mensagemErro">Não foram encontrados resultados para sua busca.</p>` 
+        } else{
+            document.getElementById('titulo-busca').innerHTML = `<p class="mensagemErro">Encontrados ${contaProduto} resultado(s) de busca para ${palavraChave}</p>`
+            
         }
         
     } 
