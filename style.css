@@ -29,30 +29,43 @@
     padding: 2px;
 }
 
-
+/*Título da Busca*/
+#titulo-busca{
+    font-family: 'Roboto Condensed';
+    text-align: center;
+    font-weight: bold;
+    color: #846219;
+    padding: 8px;
+}
 
 /*Cartões de Produtos*/
+
+#resultados-busca{
+    text-align: center;
+    width: 100%;
+    display: inline-flex;
+}
+
 .produto{
     font-family: 'Roboto Condensed';
     text-align: center;
     color: #846219;
     box-shadow: 0 15px 15px 0 rgba(0,0,0,0.5);
     margin: 30px;
-    padding: 5px;
+    padding: 15px;
+
 }
 
 .ocultar{
     display: none;
 }
 
-#resultados-busca{
-    width: 100%;
-    display: inline;
-}
+/*Responsividade para mobile*/
 
-@media screen and (min-width: 1000px){
-    
-    .produto{
-        width: 50%;
+@media screen and (max-width: 1000px){
+
+    #resultados-busca{
+        display: inline;
     }
+
 }
