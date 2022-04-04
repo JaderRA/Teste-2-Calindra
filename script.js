@@ -12,11 +12,16 @@ async function carregaProdutos(){
 
 function filtraProdutos(){
     var palavraChave = document.getElementById('caixaBusca').value;
+    var tituloBusca = document.getElementById('titulo-busca');
+    var listaProdutos = document.getElementsByName('produto');
+    var contaProduto = 0;
     if(palavraChave == null || palavraChave == ""){
-        document.getElementById('titulo-busca').innerHTML += `<p class="mensagemErro">Por favor, insira uma palavra chave.</p>`
-    } else {
-        let listaProdutos = document.getElementsByName('produto');
-        var contaProduto = 0;
+        tituloBusca.innerHTML = `<p class="mensagemErro">Por favor, insira uma palavra chave.</p>`
+        listaProdutos.forEach(item =>{
+            item.classList.add('ocultar')
+        }) 
+
+    } else {        
         listaProdutos.forEach(item =>{
             if(item.textContent.includes(palavraChave)){
                 item.classList.remove('ocultar');
@@ -27,9 +32,9 @@ function filtraProdutos(){
         })
 
         if(contaProduto == 0){
-            document.getElementById('titulo-busca').innerHTML = `<p class="mensagemErro">Não foram encontrados resultados para sua busca.</p>` 
+            tituloBusca.innerHTML = `<p class="mensagemErro">Não foram encontrados resultados para sua busca.</p>` 
         } else{
-            document.getElementById('titulo-busca').innerHTML = `<p class="mensagemErro">Encontrados ${contaProduto} resultado(s) de busca para ${palavraChave}</p>`
+            tituloBusca.innerHTML = `<p class="mensagemErro">Encontrados ${contaProduto} resultado(s) de busca para ${palavraChave}</p>`
             
         }
         
